@@ -45,9 +45,9 @@ let pics = document.getElementById("picsHere")
 images.forEach((photo , index , images) => {
     console.log(images[index]);
     let marvelsImg = `     
-       <img class="visible" src="${photo.image}">   
+       <img class="none" src="${photo.image}">   
     `;
-    pics.innerHTML += marvelsImg  
+    pics.innerHTML += marvelsImg
 });
 let current = 0;
 //let pics = document.getElementById("picsHere")
