@@ -41,9 +41,17 @@ const images = [
         text: 'Marvel\'s Avengers is an epic, third-person, action-adventure game that combines an original, cinematic story with single-player and co-operative gameplay.',
     }
 ];
-let current = 0;
 let pics = document.getElementById("picsHere")
-for (let i = 0; i < images.length; i++) {
+images.forEach((photo , index , images) => {
+    console.log(images[index]);
+    let marvelsImg = `     
+       <img class="visible" src="${photo.image}">   
+    `;
+    pics.innerHTML += marvelsImg  
+});
+let current = 0;
+//let pics = document.getElementById("picsHere")
+/*for (let i = 0; i < images.length; i++) {
     const foto = images[i];
     console.log(images);
     let marvelsImg = `     
@@ -54,9 +62,8 @@ for (let i = 0; i < images.length; i++) {
         current++
         pics[current].classList.add("visible");   
     } 
-    pics.innerHTML += marvelsImg
-    
-}
+    pics.innerHTML += marvelsImg    
+}/*
 
 
 /*pics[current].classList.add("visible");
