@@ -47,16 +47,12 @@ for (let i = 0; i < images.length; i++) {
     const foto = images[i];
     console.log(images);
     let marvelsImg = `     
-       <img class="visible" src="${foto.image}">    
+       <img class="visible" src="${foto.image}">   
     `;
     if (current<images.length-1) {
        marvelsImg[current].classList.remove("visibile")
         current++
         pics[current].classList.add("visible");   
-    }else if (current == images.length -1) {         
-        pics[current].classList.remove("visible");       
-        current = 0;                         
-        pics[current].classList.add("visible"); 
     } 
     pics.innerHTML += marvelsImg
     

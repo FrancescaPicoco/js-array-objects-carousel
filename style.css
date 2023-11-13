@@ -6,6 +6,7 @@
 body{
     font-family: 'Roboto' , sans-serif;
     background-color:rgb(37, 40, 42);
+    color: yellow;
 }
 .wrapper{   
     width: 70vw;
