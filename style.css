@@ -21,12 +21,15 @@ body{
 #picsHere img .visible{
     display: block;
 }
+.none{
+    display: none;
+}
 #picsHere{
     width: 80%;
     height: 100%;
   }
-  #right{
+#right{
     width:20%;
     height: 100%;
     background-color: cadetblue;
-  }
+}
