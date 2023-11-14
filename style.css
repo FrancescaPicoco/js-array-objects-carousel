@@ -19,16 +19,20 @@ body{
     object-fit: contain;
     display: none;
 }
+h1{
+    display: none;
+    color: yellow;
+}
 #picsHere img.visible{
+    display: block;
+}
+#picsHere h1.visible{
     display: block;
 }
 /*.visible{
     display: block;
 }*/
-h1{
-    display: none;
-    color: yellow;
-}
+
 #picsHere{
     width: 80%;
     height: 100%;
