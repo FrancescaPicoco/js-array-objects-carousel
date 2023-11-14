@@ -13,21 +13,21 @@ body{
     height: 70vh;
     transform: translate(20% , 20%);
     background-color: rgb(51, 79, 101);
+    position: relative;
 }
 #picsHere img{
     width: 100%;
     height: 100%;
     object-fit: contain;
+    display: none;
 }
-#picsHere img .visible{
+#picsHere img.visible{
     display: block;
 }
 /*.visible{
     display: block;
 }*/
-.none{
-    display: none;
-}
+
 #picsHere{
     width: 80%;
     height: 100%;
@@ -37,3 +37,20 @@ body{
     height: 100%;
     background-color: cadetblue;
 }
+#previous, #next {
+    cursor: pointer;
+    position: absolute;   
+    color: rgb(255, 162, 23);
+    font-weight: bold;
+    font-size: 30px;
+   
+    background-color: rgba(43, 41, 41, 0.591);
+  }
+  #previous{
+    top: 50%;
+    left: 0;
+  }
+  #next{
+    top: 50%;
+    right:0;
+  }

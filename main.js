@@ -49,19 +49,38 @@ images.forEach((photo) => {
 })
 
 let current = 0;
-pics[current].classList.add("visible");
-
+pics = document.querySelectorAll("#picsHere img");
+let imgCorrente = pics[current].classList.add("visible");
+console.log(imgCorrente) //undefined
 document.getElementById("next").addEventListener("click" , function() {
-    for (let i = 0; i < pics.length; i++) {
-        const indexImg = pics[i];
-        console.log(indexImg);
-        if (current < pics.length-1){
-           //pics[current].classList.remove(visible);
-           current++;
-           //pics[current].classList.add(visible);
-        }       
+    
+    if (current < images.length-1){
+       pics[current].classList.remove("visible");
+       console.log(pics[current])
+       current++;
+       pics[current].classList.add("visible");
+       console.log(pics[current] , "con incremento")
+    } else if ( current == images.length) {
+        pics[current].classList.remove("visible");
+        current = 0;
+        pics[current].classList.add("visible");
+        
+    }          
+})
+/*document.getElementById("previous").addEventListener("click" , function() {
+    for (let i = 0; i < images.length; i++) {
+     
+        if (current > 0){
+           pics[current].classList.remove("visible");
+           current--;
+           pics[current].classList.add("visible");
+        } else if ( current == pics.length) {
+            pics[current].classList.remove("visible");
+            current = pics.length -1;
+            pics[current].classList.add("visible");
+        }     
     }    
-})           
+})    */               
 
 /*const arrowfunction = (current , index , images) => {
     for (let i = 0; i < images.length; i++) {
