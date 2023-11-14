@@ -41,13 +41,16 @@ const images = [
         text: 'Marvel\'s Avengers is an epic, third-person, action-adventure game that combines an original, cinematic story with single-player and co-operative gameplay.',
     }
 ];
+//let sidePics = document.getElementById("sidePics")
 let pics = document.getElementById("picsHere")
 //const pics = document.querySelectorAll("#picsHere img");
 images.forEach((photo) => {
     let marvelsImg = `<img src="${photo.image}">`;
+    //let sideMarvelsImg = `<img src="${photo.image}"`;
     let textImg = `<h1>${photo.title}</h1>`;
     pics.innerHTML += marvelsImg;
     pics.innerHTML += textImg;
+    //sidePics.innerHTML += sideMarvelsImg;
 })
 
 let current = 0;
@@ -55,7 +58,8 @@ pics = document.querySelectorAll("#picsHere img");
 let titolo = document.querySelectorAll("#picsHere h1");
 
 let imgCorrente = pics[current].classList.add("visible");
-let titoloCorrente = titolo[current].classList.add("visible")
+let titoloCorrente = titolo[current].classList.add("visible");
+console.log(titoloCorrente) //undefined
 
 console.log(imgCorrente) //undefined
 document.getElementById("next").addEventListener("click" , function() {
@@ -65,6 +69,7 @@ document.getElementById("next").addEventListener("click" , function() {
        titolo[current].classList.remove("visible");
        
        current++;
+
        pics[current].classList.add("visible");
        titolo[current].classList.add("visible");
        
@@ -75,7 +80,7 @@ document.getElementById("next").addEventListener("click" , function() {
     }          
 })
 document.getElementById("previous").addEventListener("click" , function() {
-    if ( current == pics.length) {
+    if ( current == pics.length -1) {
         pics[current].classList.remove("visible");
         current = pics.length -1;
         pics[current].classList.add("visible");

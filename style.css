@@ -11,7 +11,6 @@ body{
     width: 70vw;
     height: 70vh;
     transform: translate(20% , 20%);
-    background-color: rgb(51, 79, 101);
     position: relative;
 }
 #picsHere img{
@@ -44,8 +43,7 @@ h1{
     position: absolute;   
     color: rgb(255, 162, 23);
     font-weight: bold;
-    font-size: 30px;
-   
+    font-size: 30px;  
     background-color: rgba(43, 41, 41, 0.591);
   }
   #previous{
