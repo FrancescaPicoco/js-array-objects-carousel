@@ -42,14 +42,50 @@ const images = [
     }
 ];
 let pics = document.getElementById("picsHere")
-images.forEach((photo , index , images) => {
-    console.log(images[index]);
-    let marvelsImg = `     
-       <img class="none" src="${photo.image}">   
-    `;
+//const pics = document.querySelectorAll("#picsHere img");
+images.forEach((photo) => {
+    let marvelsImg = `<img src="${photo.image}">`;
     pics.innerHTML += marvelsImg
-});
+})
+
 let current = 0;
+pics[current].classList.add("visible");
+
+document.getElementById("next").addEventListener("click" , function() {
+    for (let i = 0; i < pics.length; i++) {
+        const indexImg = pics[i];
+        console.log(indexImg);
+        if (current < pics.length-1){
+           //pics[current].classList.remove(visible);
+           current++;
+           //pics[current].classList.add(visible);
+        }       
+    }    
+})           
+
+/*const arrowfunction = (current , index , images) => {
+    for (let i = 0; i < images.length; i++) {
+        const element = array[i];
+        let fotoVisibility = document.getElementById("idfoto")
+        fotoVisibility.classList.add("visible");       
+    }
+
+}*/
+
+/*const arrowfunction = (current , index , images) => {
+    if (current < images.length-1) {
+        pics[current].classList.remove("visible");                                                                                         
+        //sidePics[current].classList.add("opacity");
+        current++;
+        //currentSide++;
+        console.log(current)
+        pics[current].classList.add("visible");
+        //sidePics[current].classList.remove("opacity");
+        }else if (current == images.length -1) {         
+        pics[current].classList.remove("visible");       
+        current = 0;                         
+        pics[current].classList.add("visible");      
+    }    
 //let pics = document.getElementById("picsHere")
 /*for (let i = 0; i < images.length; i++) {
     const foto = images[i];
@@ -63,7 +99,7 @@ let current = 0;
         pics[current].classList.add("visible");   
     } 
     pics.innerHTML += marvelsImg    
-}/*
+}*/
 
 
 /*pics[current].classList.add("visible");
@@ -93,7 +129,7 @@ document.getElementById("next").addEventListener("click" , function() {
         current = 0;                         
         pics[current].classList.add("visible"); 
     } 
-    pics.innerHTML += marvelsImg;*/
-    /*for (let k in arrayTeamMembers[i]) {
+    pics.innerHTML += marvelsImg;
+    for (let k in arrayTeamMembers[i]) {
         console.log(k ,":", arrayTeamMembers[i][k])   
     }*/

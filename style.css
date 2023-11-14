@@ -22,6 +22,9 @@ body{
 #picsHere img .visible{
     display: block;
 }
+/*.visible{
+    display: block;
+}*/
 .none{
     display: none;
 }
