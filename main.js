@@ -45,26 +45,33 @@ let pics = document.getElementById("picsHere")
 //const pics = document.querySelectorAll("#picsHere img");
 images.forEach((photo) => {
     let marvelsImg = `<img src="${photo.image}">`;
-    pics.innerHTML += marvelsImg
+    let textImg = `<h1>${photo.title}</h1>`;
+    pics.innerHTML += marvelsImg;
+    pics.innerHTML += textImg;
 })
 
 let current = 0;
 pics = document.querySelectorAll("#picsHere img");
+let titolo = document.querySelectorAll("#picsHere h1");
+
 let imgCorrente = pics[current].classList.add("visible");
+let titoloCorrente = titolo[current].classList.add("visible")
+
 console.log(imgCorrente) //undefined
 document.getElementById("next").addEventListener("click" , function() {
     
     if (current < images.length-1){
        pics[current].classList.remove("visible");
-       console.log(pics[current])
+       titolo[current].classList.remove("visible");
+       
        current++;
        pics[current].classList.add("visible");
-       console.log(pics[current] , "con incremento")
-    } else if ( current == images.length) {
+       titolo[current].classList.add("visible");
+       
+    } else if ( current == images.length -1) {
         pics[current].classList.remove("visible");
         current = 0;
-        pics[current].classList.add("visible");
-        
+        pics[current].classList.add("visible");   
     }          
 })
 document.getElementById("previous").addEventListener("click" , function() {

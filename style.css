@@ -6,7 +6,6 @@
 body{
     font-family: 'Roboto' , sans-serif;
     background-color:rgb(37, 40, 42);
-    color: yellow;
 }
 .wrapper{   
     width: 70vw;
@@ -27,7 +26,10 @@ body{
 /*.visible{
     display: block;
 }*/
-
+h1{
+    display: none;
+    color: yellow;
+}
 #picsHere{
     width: 80%;
     height: 100%;
