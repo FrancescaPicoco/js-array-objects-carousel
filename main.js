@@ -67,20 +67,18 @@ document.getElementById("next").addEventListener("click" , function() {
         
     }          
 })
-/*document.getElementById("previous").addEventListener("click" , function() {
-    for (let i = 0; i < images.length; i++) {
-     
-        if (current > 0){
-           pics[current].classList.remove("visible");
-           current--;
-           pics[current].classList.add("visible");
-        } else if ( current == pics.length) {
+document.getElementById("previous").addEventListener("click" , function() {
+    if ( current == pics.length) {
+        pics[current].classList.remove("visible");
+        current = pics.length -1;
+        pics[current].classList.add("visible");
+    
+        } else if (current > 0){
             pics[current].classList.remove("visible");
-            current = pics.length -1;
+            current--;
             pics[current].classList.add("visible");
-        }     
-    }    
-})    */               
+        }        
+})              
 
 /*const arrowfunction = (current , index , images) => {
     for (let i = 0; i < images.length; i++) {
